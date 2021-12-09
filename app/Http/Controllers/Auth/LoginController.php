@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/home'; //RouteServiceProvider::HOME;
 
     //login attempts before lockout
     protected $maxAttempts = 3; // attempts

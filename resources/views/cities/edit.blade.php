@@ -25,7 +25,7 @@
     
                                 <div class="col-md-6">
                                     <select name="state_id" class="form-control" aria-label="Default select example">
-                                        <option selected>Select State/Parish/Region</option>
+                                        <option selected>Select State/Region</option>
                                         @foreach ($states as $state)
                                             <option value="{{ $state->id }}" 
                                                 {{ $state->id == $city->state_id ? 'selected' : '' }}>

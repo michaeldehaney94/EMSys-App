@@ -33,6 +33,7 @@ class CityController extends Controller
     public function create()
     {
         //display list of states from state table in db using one-to-many relationship
+        //create.blade
         $states = State::all();
         return view('cities.create', compact('states'));
     }

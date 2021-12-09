@@ -4,42 +4,22 @@
 
      <!-- Page Heading -->
      <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">City/Town</h1>
+        <h1 class="h3 mb-0 text-gray-800">Departments</h1>
     </div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        {{ __('Create City/Town') }}
-                        <a href="{{ route('states.index') }}" class="float-right">Back</a>
+                        {{ __('Create Department') }}
+                        <a href="{{ route('departments.index') }}" class="float-right">Back</a>
                     </div>
     
                     <div class="card-body">
-                        <form method="POST" action="{{ route('cities.store') }}">
+                        <form method="POST" action="{{ route('departments.store') }}">
                             @csrf
-                            
-                            {{-- Country ID --}}
-                            <div class="form-group row">
-                                <label for="country_code" class="col-md-4 col-form-label text-md-right">{{ __('State') }}</label>
-    
-                                <div class="col-md-6">
-                                    <select name="state_id" class="form-control" aria-label="Default select example">
-                                        <option selected>Select State/Region</option>
-                                        @foreach ($states as $state)
-                                            <option value="{{ $state->id }}">{{ $state->name }}</option>
-                                        @endforeach
-                                    </select>
-    
-                                    @error('state_id')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-    
-                            {{-- Name of State --}}
+                    
+                            {{-- Name of Department --}}
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
     
